@@ -250,3 +250,9 @@ table thead tr th:nth-child(2) .box--cntnt p, table thead tr th:nth-child(3) .bo
 }
 
 .brand---cntnt hr {border-top: 2px dotted #222 !important;margin: 0;position: relative;bottom: -15px;}
+
+
+.scre--rslt td span, .scre--rslt td p {
+    display: inline-block;
+    font-weight: bold;
+}
