@@ -256,3 +256,50 @@ table thead tr th:nth-child(2) .box--cntnt p, table thead tr th:nth-child(3) .bo
     display: inline-block;
     font-weight: bold;
 }
+
+
+@media screen and (max-width: 767px){
+    .bx--mob .box--cntnt {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .table-scroll-mob {
+        overflow-x: auto;
+    }
+
+    .brand---cntnt,
+    .brand--logo {
+        float: none;
+        width: 100%;        
+    }
+
+    .footr--cntnt {
+        border-top-left-radius: 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 997px){
+    .bx--mob .box--cntnt {
+        margin-bottom: 30px;
+        width: 90%;
+    }
+
+    .brand---cntnt {
+        padding: 14px 15px 0px 15px;
+    }
+
+    .brand---cntnt hr {
+        bottom: 0;
+    }
+}
+
+.footr--cntnt a {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footr--cntnt a:hover {
+    text-decoration: underline;
+}
