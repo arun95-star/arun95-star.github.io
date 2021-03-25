@@ -30,6 +30,7 @@ $(document).ready(function () {
             else{
                 alert('Rate Between 1 to 10');
                 $(this).val('');
+                calculatescore();
             }
         })
 
@@ -41,6 +42,7 @@ $(document).ready(function () {
             else{
                 alert('Rate Between 1 to 10');
                 $(this).val('');
+                calculatescore();
             }
         })
 
@@ -52,6 +54,7 @@ $(document).ready(function () {
             else{
                 alert('Rate Between 1 to 10');
                 $(this).val('');
+                calculatescore();
             }
         })
     });
