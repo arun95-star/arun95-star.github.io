@@ -1,25 +1,58 @@
-$(document).ready(function(){
-    $(".checked--one").click(function(){ 
-        updateFunction(); 
-    });
+$(document).ready(function () {
+    function calculatescore(){
+        var c1total = 0;
+        $(".checked--one").each(function(index,val){
+            c1total += val.value > 0 ? parseInt(val.value) : 0;
+            $('.ckeck-one-reslt').text(c1total);
+        });
 
-    $(".checked--two").click(function(){ 
-        updateFunctionone(); 
-    });
+        var c2total = 0;
+        $(".checked--two").each(function(index,val){
+            c2total += val.value > 0 ? parseInt(val.value) : 0;
+            $('.ckeck-two-reslt').text(c2total);
+        });
 
-    $(".checked--three").click(function(){ 
-        updateFunctiontwo(); 
-    });
+        var c3total = 0;
+        $(".checked--three").each(function(index,val){
+            c3total += val.value > 0 ? parseInt(val.value) : 0;
+            $('.ckeck-three-reslt').text(c3total);
+        });
 
-    function updateFunction(){
-        $(".ckeck-one-reslt").text($(".checked--one:checked").length);
     }
+    
 
-    function updateFunctionone(){
-        $(".ckeck-two-reslt").text($(".checked--two:checked").length);
-    }
+    $(function () {
+        $('.checked--one').keyup(function (e) {
+            if($(this).val() <= 10){
+                calculatescore();
+                //if (isNaN(this.value + "" + String.fromCharCode(e.charCode))) return false;
+            }
+            else{
+                alert('Rate Between 1 to 10');
+                $(this).val('');
+            }
+        })
 
-    function updateFunctiontwo(){
-        $(".ckeck-three-reslt").text($(".checked--three:checked").length);
-    }
+        $('.checked--two').keyup(function (e) {
+            if($(this).val() <= 10){
+                //if (isNaN(this.value + "" + String.fromCharCode(e.charCode))) return false;
+                calculatescore();
+            }
+            else{
+                alert('Rate Between 1 to 10');
+                $(this).val('');
+            }
+        })
+
+        $('.checked--three').keyup(function (e) {
+            if($(this).val() <= 10){
+                //if (isNaN(this.value + "" + String.fromCharCode(e.charCode))) return false;
+                calculatescore();
+            }
+            else{
+                alert('Rate Between 1 to 10');
+                $(this).val('');
+            }
+        })
+    });
 });
